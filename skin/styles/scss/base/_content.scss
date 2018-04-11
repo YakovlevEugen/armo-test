@@ -1,0 +1,67 @@
+html {
+  color: $text-color;
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+}
+
+body {
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+  transition: all .2s ease;
+  &:hover, &:active {
+    text-decoration: $link-hover-decoration;
+  }
+  .svg-icon {
+    transition: fill .2s ease;
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  p, ul, ol, table {
+    margin-bottom: .8em;
+  }
+  ul {
+    margin-left: 15px;
+    list-style-type: disc;
+    list-style-position: outside;
+  }
+  ol {
+    margin-left: 15px;
+    list-style-position: outside;
+    list-style-type: decimal;
+  }
+  th {
+    background-color: $th-bg-color;
+    text-align: center;
+  }
+  td {
+    background-color: $td-bg-color;
+  }
+  th, td {
+    border-top: 1px solid $td-brd-color;
+    border-bottom: 1px solid $td-brd-color;
+    padding: $td-padding;
+  }
+}

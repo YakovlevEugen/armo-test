@@ -1,0 +1,15 @@
+.btn {
+  @extend %btn;
+  &_base {
+    @include btn-theme($light-color, $base-color);
+  }
+  &_primary {
+    @include btn-theme($light-color, $primary-color);
+  }
+  &_secondary {
+    @include btn-theme($light-color, $secondary-color);
+  }
+  &_attention {
+    @include btn-theme($light-color, $attention-color);
+  }
+}

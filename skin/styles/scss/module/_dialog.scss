@@ -1,0 +1,71 @@
+.popup {
+  display: none;
+  &_default-w {
+    width: 480px;
+    max-width: 100%;
+  }
+}
+
+#MyCMSDialogShadow {
+  background-color: rgba(#000, 0.6);
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.mycms-dialog {
+  animation-duration: .3s;
+  padding: 50px;
+  position: absolute;
+  text-align: center;
+  min-width: 320px;
+  width: 100%;
+  iframe {
+    border: none;
+  }
+  &__container {
+    background-color: $light-color;
+	border-radius: $border-radius-base;
+    display: inline-block;
+    vertical-align: top;
+    padding: 50px 60px;
+    position: relative;
+    //max-width: 1000px;
+    //min-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    max-width: 100%;
+  }
+  &__title {
+    @extend %ttl-base;
+  }
+  &__close {
+    @include close-btn($light-color, 3px, 50px, rgba($light-color, .2));
+    position: absolute;
+    right: -45px;
+    top: -50px;
+  }
+  &__content {
+
+  }
+  @include tablets {
+    padding: 45px 15px;
+    &__container {
+      padding: 20px;
+    }
+    &__close {
+      height: 40px;
+      width: 40px;
+      right: -10px;
+      top: -45px;
+    }
+  }
+  @include phones {
+
+  }
+}

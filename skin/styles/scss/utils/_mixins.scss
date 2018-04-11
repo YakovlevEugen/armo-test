@@ -1,0 +1,94 @@
+@mixin btn-theme($color-text, $color-bg) {
+  color: $color-text;
+  background-color: $color-bg;
+  &:hover {
+    background-color: transparent;
+    border-color: $color-bg;
+    color: $color-bg;
+  }
+}
+
+@mixin close-btn($color, $width, $size, $bgcolor: false) {
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: $size;
+  position: relative;
+  width: $size;
+  transition: all 0.2s ease;
+  @extend %no-select;
+  &:hover {
+    @if $bgcolor {
+      background-color: $bgcolor;
+    }
+  }
+  &:before,
+  &:after {
+    background-color: $color;
+    border-radius: ($width/2)+1;
+    content: '';
+    margin-left: -($width/2);
+    position: absolute;
+    top: 14%;
+    bottom: 14%;
+    left: 50%;
+    width: $width;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+@mixin input-placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin media($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin widescreen() { // min 1800
+  @media screen and (min-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin desktop() { //1800-1200
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin laptop() { // 1200-992
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin tablets() { // ipad
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin phones() { // iphone
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}

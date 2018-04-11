@@ -1,0 +1,18 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-width: 320px;
+  overflow: hidden;
+}
+
+.main-center {
+  flex: 1;
+  display: flex;
+}
+
+.layout-main {
+  margin: 0 auto;
+  max-width: 1260px;
+  padding: 0 20px;
+}

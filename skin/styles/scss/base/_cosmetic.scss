@@ -1,0 +1,56 @@
+.uppercase { text-transform: uppercase; }
+.clear {clear:both;}
+.left {float: left;}
+.right  {float: right;}
+.img-left {float: left; margin:0 15px 10px 0}
+.img-right  {float: right; margin:0 0 10px 15px}
+.t-left {text-align: left;}
+.t-right  {text-align: right;}
+.center {text-align: center;}
+.ofl {overflow: hidden;	_zoom: 1;}
+.red {color: $attention-color;}
+.orange {color: $primary-color;}
+.bold {font-weight: 600;}
+.bbold {font-weight: 600; font-size: 16px;}
+.hidden {display: none;}
+.nowrap {white-space: nowrap;}
+.cursor-pointer {cursor: pointer;}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+.ttl-base {
+  @extend %ttl-base;
+}
+
+.design-elements {
+  margin: 40px auto;
+  &__row {
+    display: flex;
+    margin-left: -$gutter;
+    @include tablets {
+      display: block;
+    }
+  }
+  &__item {
+    background-color: $light-color;
+    border-radius: $border-radius-base;
+    flex: 1;
+    margin: 0 0 $gutter $gutter;
+    padding: $gutter;
+  }
+  .svg-icon {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.grid {
+  display: flex;
+  margin: 0 0 $gutter (-$gutter);
+  &__cell {
+    flex: 1;
+    margin-left: $gutter;
+  }
+}

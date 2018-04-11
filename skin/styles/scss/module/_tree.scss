@@ -1,0 +1,67 @@
+.tree-layout {
+  flex: none;
+  min-width: $aside-min-width;
+  max-width: $aside-max-width;
+  width: $aside-width;
+  padding: 20px 10px;
+  background-color: #f8f8f8;
+  border-right: 1px solid gray;
+  overflow-y: auto;
+}
+
+.tree {
+  $root: &;
+
+  &:not(:first-child) {
+    margin-top: 5px;
+  }
+
+  & > ul {
+    margin-top: 5px;
+
+    & > li {
+      margin-left: 0;
+    }
+  }
+
+  &__ttl {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  &__node {
+    background: url('/skin/images/i.gif') top left repeat-y;
+    margin-left: 20px;
+
+    &.is-open {
+      & > #{$root}__expand {
+        background-image: url('/skin/images/expand_minus.gif');
+      }
+    }
+
+    ul {
+      display: none;
+    }
+  }
+
+  &__expand, &__leaf {
+    float: left;
+    height: 18px;
+    width: 18px;
+  }
+
+  &__expand {
+    background-image: url('/skin/images/expand_plus.gif');
+    cursor: pointer;
+  }
+
+  &__leaf {
+    background-image: url('/skin/images/expand_leaf.gif');
+  }
+
+  &__node-ttl {
+    min-height: 18px;
+    margin-left: 20px;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,39 @@
+.svg-icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 1em;
+  vertical-align: middle;
+  a &,
+  button & {
+    pointer-events: none;
+  }
+}
+
+.icon {
+  &:before {
+    display: inline-block;
+    content: '';
+  }
+}
+
+.icon-checkbox {
+  &:before {
+    @include sprite($checkbox);
+  }
+}
+
+.icon-wishlist {
+  &:before {
+    @include sprite($wishlist);
+  }
+  &:hover {
+    &:before {
+      @include sprite-position($wishlist-hover);
+    }
+  }
+  &:active {
+    &:before {
+      @include sprite-position($wishlist-active);
+    }
+  }
+}

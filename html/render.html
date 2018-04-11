@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Тестовое задание ГК АРМО</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, initial-scale=1.0, minimum-scale=1.0">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/skin/styles/foundation.css" media="screen">
+    <link rel="stylesheet" href="/skin/styles/app.css" media="screen">
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="main-header">
+        <nav class="main-header__nav header-nav">
+          <ul class="header-nav__group">
+            <li class="header-nav__item">
+              <label class="header-nav__link">
+                <input class="js-downloadFile" type="file">
+                <svg class="header-nav__item-img svg-icon icon-download">
+                  <use xlink:href="/skin/images/svg-sprite.svg#download"></use>
+                </svg>
+                <span class="header-nav__item-name">Загрузчик</span>
+              </label>
+            </li>
+            <li class="header-nav__item">
+              <a href="#" class="header-nav__link">
+                <svg class="header-nav__item-img svg-icon icon-edit">
+                  <use xlink:href="/skin/images/svg-sprite.svg#edit"></use>
+                </svg>
+                <span class="header-nav__item-name">Редактор данных</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="main-center">
+        <%include src="../html/tree.html"%>
+
+        <div class="desktop"></div>
+      </main>
+    </div>
+
+    <script src="/skin/js/foundation.js"></script>
+    <script src="/skin/js/app.js"></script>
+  </body>
+</html>

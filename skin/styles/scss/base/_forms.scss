@@ -1,0 +1,83 @@
+input, textarea {
+  appearance:none;
+}
+::-ms-clear {
+  display:none;
+}
+
+.inp-base, .textarea-base, .select-base {
+  @extend %form-element;
+  @include input-placeholder {
+    color: $input-placeholder-color;
+    opacity: 1;
+  }
+}
+
+.textarea-base {
+  height: $textarea-height;
+  resize: none;
+  padding: $gutter $gutter;
+}
+
+
+.select-base {
+  appearance: none !important;
+  color: transparent;
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.switch {
+  $root: &;
+
+  cursor: pointer;
+  padding-left: ($input-checkbox-size+10px);
+  position: relative;
+  &__inp {
+    display: none;
+  }
+  &__el {
+    border: $input-border-width solid $input-border-color;
+    height: $input-checkbox-size;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: $input-checkbox-size;
+    #{$root}__inp[type="radio"] + & {
+      border-radius: 50%;
+      &:before {
+        border-radius: 50%;
+      }
+    }
+    #{$root}__inp[type="checkbox"] + & {
+
+    }
+    &:before {
+      transition: all .3s ease;
+      background-color: $primary-color;
+      content: '';
+      opacity: 0;
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      bottom: 3px;
+      left: 3px;
+      #{$root}__inp:checked + & {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.form-base {
+  &__field {
+    &:not(:last-child) {
+      margin-bottom: $gutter;
+    }
+  }
+  &__btns {
+    margin-top: 30px;
+    text-align: center;
+  }
+}

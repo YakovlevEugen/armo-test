@@ -1,0 +1,19 @@
+{
+	listItem1: 13,
+	subList: {
+		subSubList: {
+				subSubListItem1: 12,
+				subSubListItem2: 'green'
+		},
+		subListItem1: 'blue'
+	},
+	subItem: {
+		subSubList: {
+				subSubListItem1: 12,
+				subSubListItem2: {
+					'green': 1
+				}
+		},
+		subListItem1: 'blue'
+	}
+}
